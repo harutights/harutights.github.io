@@ -48,6 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		img.loading = index < 8 ? 'eager' : 'lazy';
 		img.decoding = 'async';
 
+		img.addEventListener('load', () => {
+			if (img.naturalWidth > img.naturalHeight) {
+				img.classList.add('landscape');
+			}
+		}, {
+			once: true
+		});
+
 		img.addEventListener('error', () => {
 			console.warn(`Could not load image: ${filename}`);
 			img.remove();

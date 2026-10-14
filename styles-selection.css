@@ -43,19 +43,24 @@ body {
 }
 
 .card {
-    columns: 4 15rem;
-    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
 }
 
 .card img {
     display: block;
     width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    min-width: 0;
     border-radius: 1rem;
-    break-inside: avoid;
     transition: transform 0.2s ease-in-out;
     user-select: none;
+}
+
+.card img.landscape {
+    grid-column: span 2;
 }
 
 .card img:hover {
@@ -73,12 +78,11 @@ body {
     }
 
     .card {
-        columns: 2 9rem;
-        column-gap: 0.65rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.65 rem;
     }
 
     .card img {
-        margin-bottom: 0.65rem;
         border-radius: 0.65rem;
     }
 }
