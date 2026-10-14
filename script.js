@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const wall = document.querySelector('.card');
 	if (!wall) return;
 
-	const TOTAL_IMAGES = 869;
+	const TOTAL_IMAGES = 868;
 	const SELECTION_SIZE = 50;
 	const IMAGE_DIR = './images/';
 
