@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const wall = document.querySelector('.card');
+	const wall = document.querySelector('.images');
 	if (!wall) return;
 
 	const TOTAL_IMAGES = 868;
